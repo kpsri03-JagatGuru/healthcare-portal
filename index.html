@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthCare Portal</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo" onclick="scrollToHome()">HealthCare Portal</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#doctors">Doctors</a></li>
+            <li><a href="#appointments">Appointments</a></li>
+        </ul>
+        <div class="hamburger">☰</div>
+    </nav>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Your Health, Our Priority</h1>
+            <p>Expert medical care at your fingertips</p>
+            <button class="btn-primary" onclick="openAppointmentForm()">Book Appointment</button>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <h2>Our Services</h2>
+        <div class="service-grid">
+            <div class="service-card">
+                <img src="https://cdn-icons-png.flaticon.com/128/4006/4006511.png" alt="General Checkup" class="service-icon">
+                <h3>General Checkup</h3>
+                <p>Comprehensive health examination</p>
+            </div>
+            <div class="service-card">
+                <img src="https://cdn-icons-png.flaticon.com/128/3022/3022552.png" alt="Specialist Care" class="service-icon">
+                <h3>Specialist Care</h3>
+                <p>Expert medical consultation</p>
+            </div>
+            <div class="service-card">
+                <img src="https://cdn-icons-png.flaticon.com/128/2382/2382461.png" alt="Emergency" class="service-icon">
+                <h3>24/7 Emergency</h3>
+                <p>Round-the-clock emergency care</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="doctors" class="doctors">
+        <h2>Our Medical Team</h2>
+        <p class="section-subtitle">Meet our experienced and qualified healthcare professionals</p>
+        <div class="doctors-grid">
+            <div class="doctor-card">
+                <img src="https://images.unsplash.com/photo-1612349317150-e539c59dc506?w=300&h=300&fit=crop" alt="Dr. Sarah Johnson" class="doctor-image">
+                <div class="doctor-info">
+                    <h3>Dr. Sarah Johnson</h3>
+                    <p class="specialty">General Practitioner</p>
+                    <p class="experience">15+ Years Experience</p>
+                    <div class="rating">
+                        <span class="stars">★★★★★</span>
+                        <span class="rating-text">(4.9/5 - 250+ reviews)</span>
+                    </div>
+                    <p class="bio">Dr. Sarah specializes in comprehensive health evaluations and preventive care. She is known for her compassionate approach and thorough patient consultations.</p>
+                    <ul class="specializations">
+                        <li>General Checkup</li>
+                        <li>Preventive Care</li>
+                        <li>Health Counseling</li>
+                    </ul>
+                    <button class="btn-secondary" onclick="scrollToAppointment()">Book Appointment</button>
+                </div>
+            </div>
+
+            <div class="doctor-card">
+                <img src="https://images.unsplash.com/photo-1559839734033-6461efaf586b?w=300&h=300&fit=crop" alt="Dr. Michael Chen" class="doctor-image">
+                <div class="doctor-info">
+                    <h3>Dr. Michael Chen</h3>
+                    <p class="specialty">Cardiologist</p>
+                    <p class="experience">12+ Years Experience</p>
+                    <div class="rating">
+                        <span class="stars">★★★★★</span>
+                        <span class="rating-text">(4.8/5 - 180+ reviews)</span>
+                    </div>
+                    <p class="bio">Dr. Michael is a board-certified cardiologist with expertise in heart disease diagnosis and treatment. He is committed to providing personalized cardiac care.</p>
+                    <ul class="specializations">
+                        <li>Cardiac Consultation</li>
+                        <li>ECG & Stress Tests</li>
+                        <li>Heart Disease Management</li>
+                    </ul>
+                    <button class="btn-secondary" onclick="scrollToAppointment()">Book Appointment</button>
+                </div>
+            </div>
+
+            <div class="doctor-card">
+                <img src="https://images.unsplash.com/photo-1638202993928-7267faf34444?w=300&h=300&fit=crop" alt="Dr. Emily Rodriguez" class="doctor-image">
+                <div class="doctor-info">
+                    <h3>Dr. Emily Rodriguez</h3>
+                    <p class="specialty">Pediatrician</p>
+                    <p class="experience">10+ Years Experience</p>
+                    <div class="rating">
+                        <span class="stars">★★★★★</span>
+                        <span class="rating-text">(4.9/5 - 320+ reviews)</span>
+                    </div>
+                    <p class="bio">Dr. Emily specializes in pediatric care with a focus on child development and immunization. She creates a comfortable environment for children and parents.</p>
+                    <ul class="specializations">
+                        <li>Child Health</li>
+                        <li>Immunization</li>
+                        <li>Growth Monitoring</li>
+                    </ul>
+                    <button class="btn-secondary" onclick="scrollToAppointment()">Book Appointment</button>
+                </div>
+            </div>
+
+            <div class="doctor-card">
+                <img src="https://images.unsplash.com/photo-1594824476967-48c8b964e7ee?w=300&h=300&fit=crop" alt="Dr. James Wilson" class="doctor-image">
+                <div class="doctor-info">
+                    <h3>Dr. James Wilson</h3>
+                    <p class="specialty">Orthopedic Surgeon</p>
+                    <p class="experience">18+ Years Experience</p>
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-text">(4.7/5 - 210+ reviews)</span>
+                    </div>
+                    <p class="bio">Dr. James specializes in orthopedic surgery and sports medicine. He has successfully treated thousands of patients with bone and joint conditions.</p>
+                    <ul class="specializations">
+                        <li>Joint Surgery</li>
+                        <li>Sports Medicine</li>
+                        <li>Fracture Treatment</li>
+                    </ul>
+                    <button class="btn-secondary" onclick="scrollToAppointment()">Book Appointment</button>
+                </div>
+            </div>
+
+            <div class="doctor-card">
+                <img src="https://images.unsplash.com/photo-1606723814524-ef7fcfe16670?w=300&h=300&fit=crop" alt="Dr. Lisa Anderson" class="doctor-image">
+                <div class="doctor-info">
+                    <h3>Dr. Lisa Anderson</h3>
+                    <p class="specialty">Dermatologist</p>
+                    <p class="experience">14+ Years Experience</p>
+                    <div class="rating">
+                        <span class="stars">★★★★★</span>
+                        <span class="rating-text">(4.8/5 - 290+ reviews)</span>
+                    </div>
+                    <p class="bio">Dr. Lisa is an expert in dermatology with specialization in acne, skin aging, and surgical treatments. She uses the latest dermatological techniques.</p>
+                    <ul class="specializations">
+                        <li>Skin Treatment</li>
+                        <li>Cosmetic Dermatology</li>
+                        <li>Allergy Diagnosis</li>
+                    </ul>
+                    <button class="btn-secondary" onclick="scrollToAppointment()">Book Appointment</button>
+                </div>
+            </div>
+
+            <div class="doctor-card">
+                <img src="https://images.unsplash.com/photo-1579154204601-01d6f07dc51f?w=300&h=300&fit=crop" alt="Dr. Robert Martinez" class="doctor-image">
+                <div class="doctor-info">
+                    <h3>Dr. Robert Martinez</h3>
+                    <p class="specialty">Neurologist</p>
+                    <p class="experience">16+ Years Experience</p>
+                    <div class="rating">
+                        <span class="stars">★★★★★</span>
+                        <span class="rating-text">(4.9/5 - 195+ reviews)</span>
+                    </div>
+                    <p class="bio">Dr. Robert specializes in neurological disorders and has extensive experience in diagnosis and treatment of complex neurological conditions.</p>
+                    <ul class="specializations">
+                        <li>Neurological Consultation</li>
+                        <li>Migraine Management</li>
+                        <li>Seizure Disorders</li>
+                    </ul>
+                    <button class="btn-secondary" onclick="scrollToAppointment()">Book Appointment</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Appointment Modal -->
+    <div id="appointmentModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Schedule Appointment</h2>
+            <form id="appointmentForm">
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email" required>
+                <input type="tel" placeholder="Phone Number" required>
+                <input type="date" required>
+                <select required>
+                    <option value="">Select Service</option>
+                    <option value="general">General Checkup</option>
+                    <option value="specialist">Specialist Consultation</option>
+                    <option value="emergency">Emergency</option>
+                </select>
+                <button type="submit" class="btn-primary">Confirm Booking</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>About HealthCare Portal</h3>
+                <p>Providing excellent healthcare services with a team of experienced medical professionals. Your health is our priority.</p>
+                <div class="social-links">
+                    <a href="#" class="social-icon">f</a>
+                    <a href="#" class="social-icon">t</a>
+                    <a href="#" class="social-icon">in</a>
+                    <a href="#" class="social-icon">ig</a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#doctors">Our Doctors</a></li>
+                    <li><a href="#appointments">Book Appointment</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Services</h3>
+                <ul class="footer-links">
+                    <li><a href="#">General Checkup</a></li>
+                    <li><a href="#">Specialist Consultation</a></li>
+                    <li><a href="#">Emergency Care</a></li>
+                    <li><a href="#">Health Screening</a></li>
+                    <li><a href="#">Preventive Care</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact Information</h3>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span class="contact-icon">📍</span>
+                        <div>
+                            <p class="contact-label">Address</p>
+                            <p>123 Medical Plaza, Healthcare City, HC 12345</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">📞</span>
+                        <div>
+                            <p class="contact-label">Phone</p>
+                            <p>(555) 123-4567</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">✉️</span>
+                        <div>
+                            <p class="contact-label">Email</p>
+                            <p>info@healthcareportal.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">🕐</span>
+                        <div>
+                            <p class="contact-label">Hours</p>
+                            <p>Mon-Fri: 9AM-6PM, Sat: 10AM-4PM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <div class="footer-bottom-content">
+                <p>&copy; 2025 HealthCare Portal. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <span>|</span>
+                    <a href="#">Terms of Service</a>
+                    <span>|</span>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
